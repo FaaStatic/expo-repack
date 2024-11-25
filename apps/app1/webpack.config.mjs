@@ -109,8 +109,8 @@ export default (env) => {
      */
     output: {
       clean: true,
-      path: path.join(dirname, "build", platform),
-      filename: "index.bundle",
+      path: path.resolve(dirname, "build", platform), // Absolute path
+      filename: "[name].bundle",
       chunkFilename: "[name].chunk.bundle",
       publicPath: Repack.getPublicPath({ platform, devServer }),
     },
@@ -253,9 +253,9 @@ export default (env) => {
       new Repack.plugins.ModuleFederationPlugin({
         name: "app1",
         exposes: {
-          './App': './src/components/App.tsx',
-          './BlueText': './src/components/BlueText.tsx',
-          './foo': './src/helpers/foo.ts',
+          "./App": "./src/components/App.tsx",
+          "./BlueText": "./src/components/BlueText.tsx",
+          "./foo": "./src/helpers/foo.ts",
         },
         shared: {
           react: {
@@ -270,7 +270,7 @@ export default (env) => {
           },
         },
         remotes: {
-          module1: 'module1@dynamic',
+          module1: "module1@dynamic",
         },
       }),
     ],

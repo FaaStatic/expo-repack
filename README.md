@@ -6,7 +6,7 @@ This example shows you how to setup [Expo](https://github.com/expo/expo) & [Re.P
 ## Usage
 
 Change to your ip:
-- `192.168.1.75`
+- `10.200.202.208`
 
 Install dependencies:
 

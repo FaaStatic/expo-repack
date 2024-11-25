@@ -6,9 +6,9 @@ import App from "./App";
 
 const resolveURL = Federated.createURLResolver({
   containers: {
-    app1: 'http://192.168.1.75:9000/[name][ext]',
-    app2: 'http://192.168.1.75:9001/[name][ext]',
-    module1: 'http://192.168.1.75:9002/[name][ext]',
+    app1: 'http://10.200.202.208:9000/[name][ext]',
+    app2: 'http://10.200.202.208:9001/[name][ext]',
+    module1: 'http://10.200.202.208:9002/[name][ext]',
   },
 });
 
